@@ -1,0 +1,22 @@
+title: Value Investing Insights
+description: Deep dives, market commentary, and long-term investment thinking by Yogesh Gajipara.
+author: Yogesh Gajipara
+
+baseurl: ""
+url: "https://gajiparayogesh95.github.io"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+permalink: /blog/:year/:month/:day/:title/
+
+exclude:
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+  - node_modules/
+  - scss/
+  - .travis.yml
+  - README.md
