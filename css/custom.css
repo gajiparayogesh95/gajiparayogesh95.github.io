@@ -1,0 +1,395 @@
+/* ===================================================
+   Custom Professional Theme — Yogesh Gajipara Resume
+   =================================================== */
+
+/* Google Fonts upgrade */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --navy:        #1a2742;
+  --navy-mid:    #243356;
+  --navy-light:  #2e4070;
+  --gold:        #c9a84c;
+  --gold-light:  #e8c96a;
+  --white:       #ffffff;
+  --off-white:   #f8f9fc;
+  --text-dark:   #1e293b;
+  --text-mid:    #475569;
+  --text-light:  #94a3b8;
+  --border:      #e2e8f0;
+  --shadow-sm:   0 2px 8px rgba(26,39,66,.08);
+  --shadow-md:   0 4px 20px rgba(26,39,66,.12);
+  --transition:  all .25s ease;
+}
+
+/* ── Base ── */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-mid);
+  background: var(--off-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  text-transform: none;
+  letter-spacing: -.01em;
+}
+
+h1 {
+  font-size: 3.4rem;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+a { color: var(--gold); }
+a:hover, a:focus { color: var(--gold-light); }
+
+/* ── Sidebar ── */
+#sideNav {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-light) 100%) !important;
+  box-shadow: 4px 0 24px rgba(0,0,0,.18);
+}
+
+/* Profile photo */
+#sideNav .navbar-brand .img-profile {
+  max-width: 9rem;
+  max-height: 9rem;
+  border: 3px solid var(--gold) !important;
+  box-shadow: 0 0 0 5px rgba(201,168,76,.18), 0 8px 32px rgba(0,0,0,.28);
+  transition: var(--transition);
+}
+
+#sideNav .navbar-brand .img-profile:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 0 7px rgba(201,168,76,.28), 0 12px 40px rgba(0,0,0,.3);
+}
+
+/* Name in mobile nav */
+#sideNav .navbar-brand span.d-block {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* Nav links */
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: .8rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.72) !important;
+  padding: .6rem 1.5rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover {
+  color: var(--white) !important;
+  padding-left: 1.9rem;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover::before {
+  opacity: 1;
+}
+
+/* Toggler */
+#sideNav .navbar-toggler:focus { outline-color: var(--gold); }
+
+/* ── Main content area ── */
+section.resume-section {
+  background: var(--white);
+  border-radius: 0;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+section.resume-section:nth-child(even) {
+  background: var(--off-white);
+}
+
+/* ── About section ── */
+#about {
+  background: var(--white);
+}
+
+#about h1 {
+  color: var(--navy);
+  font-size: 3.6rem;
+}
+
+#about h1 span.text-primary {
+  color: var(--gold) !important;
+}
+
+#about .subheading {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: var(--text-light);
+  text-transform: none;
+  font-family: 'Poppins', sans-serif;
+  border-left: 3px solid var(--gold);
+  padding-left: .8rem;
+  margin-bottom: 1.5rem !important;
+}
+
+#about .subheading a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+#about .subheading a:hover { color: var(--gold-light); }
+
+#about p.lead {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-mid);
+  font-weight: 400;
+  max-width: 680px;
+}
+
+/* Social icons */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.8rem;
+  width: 2.8rem;
+  background: transparent;
+  color: var(--navy) !important;
+  border: 2px solid var(--navy);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  margin-right: .7rem;
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+  color: var(--white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201,168,76,.35);
+}
+
+/* ── Section headings ── */
+.resume-section h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -.01em;
+  margin-bottom: 2.5rem !important;
+  padding-bottom: .75rem;
+  position: relative;
+  display: inline-block;
+}
+
+.resume-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border-radius: 2px;
+}
+
+hr.m-0 {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 !important;
+}
+
+/* ── Experience & Education items ── */
+.resume-item {
+  position: relative;
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 1.5rem !important;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.resume-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: rgba(201,168,76,.3);
+}
+
+.resume-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--gold), var(--gold-light));
+  border-radius: 12px 0 0 12px;
+}
+
+.resume-item h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: .3rem !important;
+}
+
+.resume-item .subheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: .85rem;
+  font-weight: 500;
+  text-transform: none;
+  color: var(--gold);
+  letter-spacing: .01em;
+  margin-bottom: .9rem !important;
+}
+
+.resume-item ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.resume-item ul li {
+  font-size: .9rem;
+  line-height: 1.75;
+  color: var(--text-mid);
+  margin-bottom: .3rem;
+}
+
+.resume-item ul li::marker {
+  color: var(--gold);
+}
+
+.resume-date {
+  white-space: nowrap;
+}
+
+.resume-date .text-primary {
+  color: var(--text-light) !important;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  background: var(--off-white);
+  padding: .3rem .8rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Education sub-items */
+#education .resume-item > div > div:last-child {
+  font-size: .85rem;
+  color: var(--text-light);
+  margin-top: .25rem;
+}
+
+/* ── Skills ── */
+#skills .subheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--navy);
+  margin-bottom: .8rem !important;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+#skills .subheading::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+.fa-ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.8rem !important;
+}
+
+.fa-ul li {
+  font-size: .9rem;
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin-bottom: .3rem;
+  padding: .15rem 0;
+}
+
+.fa-li {
+  color: var(--gold) !important;
+  font-size: .65rem;
+  top: .42em;
+}
+
+/* ── Certifications ── */
+#awards .fa-ul li {
+  font-size: 1rem;
+  padding: .5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+#awards .fa-ul li:last-child { border-bottom: none; }
+
+#awards .fa-li {
+  color: var(--gold) !important;
+  font-size: 1rem;
+  top: .5em;
+}
+
+/* ── Utility overrides ── */
+.bg-primary {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-light) 100%) !important;
+}
+
+.text-primary { color: var(--gold) !important; }
+
+/* ── Scrollbar (webkit) ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--off-white); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ── Responsive tweaks ── */
+@media (max-width: 991px) {
+  #about h1 { font-size: 2.4rem; }
+  .resume-item { padding: 1.2rem 1.4rem; }
+}
