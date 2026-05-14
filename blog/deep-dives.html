@@ -1,0 +1,35 @@
+---
+layout: blog-default
+title: Deep Dives
+description: Detailed analysis of individual companies — business model, financials, valuation, and investment thesis.
+---
+
+<section class="blog-hero">
+  <h1>Deep Dives</h1>
+  <p>Detailed analysis of individual companies — business model, financials, valuation, and investment thesis.</p>
+</section>
+
+<section class="posts-section">
+  <div class="posts-grid">
+    {% assign deep_dive_posts = site.posts | where: "category", "Deep Dive" %}
+    {% if deep_dive_posts.size > 0 %}
+      {% for post in deep_dive_posts %}
+      <article class="post-card">
+        <div class="post-card-body">
+          <span class="post-category cat-deep-dive">Deep Dive</span>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+          <div class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            &middot; {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    {% else %}
+      <div class="empty-state">
+        <p>No deep dives yet — check back soon.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>

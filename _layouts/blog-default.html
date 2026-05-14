@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}Value Investing Insights</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/assets/css/blog.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="/blog/" class="brand">
+        <div>
+          <div class="brand-name">Value Investing Insights</div>
+          <div class="brand-sub">by Yogesh Gajipara</div>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/blog/" class="nav-link">Home</a></li>
+        <li><a href="/blog/deep-dives/" class="nav-link">Deep Dives</a></li>
+        <li><a href="/blog/commentary/" class="nav-link">Commentary</a></li>
+        <li><a href="/blog/watchlist/" class="nav-link">Watchlist</a></li>
+        <li><a href="/blog/philosophy/" class="nav-link">Philosophy</a></li>
+        <li><a href="/blog/resources/" class="nav-link">Resources</a></li>
+        <li><a href="/" class="nav-link nav-link-resume">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>{{ content }}</main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name">Value Investing Insights</div>
+          <p>Long-term thinking in a short-term world.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/blog/">Home</a>
+          <a href="/blog/philosophy/">Philosophy</a>
+          <a href="/blog/watchlist/">Watchlist</a>
+          <a href="/blog/resources/">Resources</a>
+          <a href="/">Resume</a>
+        </div>
+      </div>
+      <p class="footer-disclaimer">Nothing on this site is financial advice. All content is for educational and informational purposes only. Do your own research before making any investment decisions.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    var links = document.querySelectorAll('.nav-link');
+    var path = window.location.pathname;
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === path || (path.startsWith(link.getAttribute('href')) && link.getAttribute('href') !== '/')) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
