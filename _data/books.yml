@@ -1,0 +1,215 @@
+# ============================================================
+# Bookshelf data
+# ------------------------------------------------------------
+# To add a real cover photo for any book:
+#   1. Drop the image into  img/books/  (e.g. img/books/intelligent-investor.jpg)
+#   2. Set  image: /img/books/intelligent-investor.jpg  on that book below
+# If no `image` is set, a designed cover card is generated automatically.
+# Recommended photo size: 400x600px (2:3 portrait ratio).
+# ============================================================
+
+- title: The Intelligent Investor
+  author: Benjamin Graham
+  year: 1949
+  shelf: Foundations
+  rating: 5
+  image:
+  note: >
+    The book that defines the discipline. Mr. Market, margin of safety, and the
+    distinction between investing and speculation all originate here. Chapters 8
+    and 20 are the ones Buffett calls the most important ever written on investing.
+
+- title: Security Analysis
+  author: Benjamin Graham & David Dodd
+  year: 1934
+  shelf: Foundations
+  rating: 4
+  image:
+  note: >
+    Dense, technical, and written in the wreckage of the Great Depression. Not a
+    first read, but the original framework for dissecting financial statements and
+    estimating what a business is actually worth.
+
+- title: Common Stocks and Uncommon Profits
+  author: Philip Fisher
+  year: 1958
+  shelf: Foundations
+  rating: 4
+  image:
+  note: >
+    The qualitative counterweight to Graham. Fisher's "scuttlebutt" method — talking
+    to customers, suppliers and competitors — is how you learn things that never
+    appear in a filing.
+
+- title: The Essays of Warren Buffett
+  author: Warren Buffett & Lawrence Cunningham
+  year: 1997
+  shelf: Buffett & Munger
+  rating: 5
+  image:
+  note: >
+    Berkshire's shareholder letters reorganised by theme rather than year. Far more
+    useful than reading four decades of letters chronologically.
+
+- title: Poor Charlie's Almanack
+  author: Charlie Munger
+  year: 2005
+  shelf: Buffett & Munger
+  rating: 5
+  image:
+  note: >
+    Munger's collected talks on mental models and multidisciplinary thinking. The
+    "Psychology of Human Misjudgment" chapter is worth the price of the book on its own.
+
+- title: "Buffett: The Making of an American Capitalist"
+  author: Roger Lowenstein
+  year: 1995
+  shelf: Buffett & Munger
+  rating: 4
+  image:
+  note: >
+    The best straight biography. Valuable because it shows the early partnership
+    years — when Buffett was working with small sums and cigar-butt deals most
+    investors could actually replicate.
+
+- title: Competition Demystified
+  author: Bruce Greenwald
+  year: 2005
+  shelf: Moats & Business Quality
+  rating: 5
+  image:
+  note: >
+    Greenwald argues most of Porter's five forces are noise and only barriers to
+    entry really matter. Clearer and more actionable for investors than Porter himself.
+
+- title: 7 Powers
+  author: Hamilton Helmer
+  year: 2016
+  shelf: Moats & Business Quality
+  rating: 5
+  image:
+  note: >
+    A precise taxonomy of the seven structural advantages that let a business sustain
+    returns. Short, rigorous, and the best modern book on competitive advantage.
+
+- title: The Outsiders
+  author: William Thorndike
+  year: 2012
+  shelf: Moats & Business Quality
+  rating: 5
+  image:
+  note: >
+    Eight CEOs who compounded shareholder capital at extraordinary rates by being
+    ruthless about capital allocation. Changed how I evaluate management.
+
+- title: Quality Investing
+  author: Cunningham, Eide & Hargreaves
+  year: 2016
+  shelf: Moats & Business Quality
+  rating: 4
+  image:
+  note: >
+    A practical field guide to recognising durable businesses — the patterns that
+    recur across high-quality companies, with real case studies.
+
+- title: "Valuation: Measuring and Managing the Value of Companies"
+  author: McKinsey & Company
+  year: 1990
+  shelf: Valuation
+  rating: 4
+  image:
+  note: >
+    The most rigorous treatment of DCF, ROIC and what genuinely drives enterprise
+    value. A reference to work through slowly, not a book to read cover to cover.
+
+- title: The Most Important Thing
+  author: Howard Marks
+  year: 2011
+  shelf: Valuation
+  rating: 5
+  image:
+  note: >
+    Marks on second-level thinking, cycles, and the difference between risk and
+    volatility. The annotated edition with commentary from other investors is the
+    one to get.
+
+- title: Margin of Safety
+  author: Seth Klarman
+  year: 1991
+  shelf: Valuation
+  rating: 5
+  image:
+  note: >
+    Long out of print and absurdly expensive secondhand. Klarman's case for
+    risk-aversion as the foundation of return is the clearest ever written.
+
+- title: Expectations Investing
+  author: Mauboussin & Rappaport
+  year: 2001
+  shelf: Valuation
+  rating: 4
+  image:
+  note: >
+    Inverts the usual process: instead of forecasting cash flows, read the
+    expectations already priced into the stock and ask whether they are reasonable.
+
+- title: Thinking, Fast and Slow
+  author: Daniel Kahneman
+  year: 2011
+  shelf: Psychology & Decisions
+  rating: 5
+  image:
+  note: >
+    Understanding your own biases matters as much as any valuation framework.
+    Anchoring, loss aversion and overconfidence are the three that cost investors most.
+
+- title: Fooled by Randomness
+  author: Nassim Nicholas Taleb
+  year: 2001
+  shelf: Psychology & Decisions
+  rating: 4
+  image:
+  note: >
+    A useful corrective to survivorship bias and the habit of mistaking luck for
+    skill — including your own.
+
+- title: Influence
+  author: Robert Cialdini
+  year: 1984
+  shelf: Psychology & Decisions
+  rating: 4
+  image:
+  note: >
+    Not an investing book, but essential for reading management commentary,
+    earnings calls and sell-side research with appropriate scepticism.
+
+- title: One Up on Wall Street
+  author: Peter Lynch
+  year: 1989
+  shelf: Practitioners
+  rating: 4
+  image:
+  note: >
+    Lynch's categories — stalwarts, fast growers, cyclicals, turnarounds — remain a
+    genuinely useful way to sort businesses before you start valuing them.
+
+- title: You Can Be a Stock Market Genius
+  author: Joel Greenblatt
+  year: 1997
+  shelf: Practitioners
+  rating: 4
+  image:
+  note: >
+    Terrible title, excellent book. Spin-offs, rights offerings and restructurings
+    are where inefficiency persists because institutions are structurally unable to
+    participate.
+
+- title: 100 Baggers
+  author: Christopher Mayer
+  year: 2015
+  shelf: Practitioners
+  rating: 4
+  image:
+  note: >
+    A study of stocks that returned 100x, and what they had in common: high ROIC,
+    long reinvestment runways, and owners willing to hold through drawdowns.

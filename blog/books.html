@@ -1,0 +1,86 @@
+---
+layout: blog-default
+title: Bookshelf
+description: The books that shaped how I think about investing — with notes on why each one matters.
+permalink: /blog/books/
+---
+
+<section class="page-header">
+  <h1>Bookshelf</h1>
+  <p>The books that shaped how I think about investing — and honest notes on why each one earns its place.</p>
+</section>
+
+<div class="books-page">
+
+  <div class="shelf-intro">
+    <p>
+      Reading is the highest-leverage activity in investing. Not because any single book
+      contains an edge, but because the accumulated frameworks let you recognise patterns
+      faster than someone starting from scratch. These are the twenty I return to most.
+    </p>
+    <p class="shelf-legend">
+      <span class="star-rating" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span> essential &nbsp;&middot;&nbsp;
+      <span class="star-rating" aria-label="4 out of 5">&#9733;&#9733;&#9733;&#9733;&#9734;</span> worth your time
+    </p>
+  </div>
+
+  {% assign shelves = "Foundations,Buffett & Munger,Moats & Business Quality,Valuation,Psychology & Decisions,Practitioners" | split: "," %}
+
+  {% for shelf in shelves %}
+    {% assign shelf_books = site.data.books | where: "shelf", shelf %}
+    {% if shelf_books.size > 0 %}
+    <section class="shelf">
+      <h2 class="shelf-title">{{ shelf }}</h2>
+      <div class="books-grid">
+        {% for book in shelf_books %}
+        <article class="book">
+
+          {% if book.image and book.image != "" %}
+          <div class="book-cover book-cover-photo">
+            <img src="{{ book.image }}" alt="Cover of {{ book.title }}" loading="lazy">
+          </div>
+          {% else %}
+          {% assign tone = forloop.index0 | modulo: 5 %}
+          <div class="book-cover book-cover-designed tone-{{ tone }}" aria-hidden="true">
+            <div class="cover-spine"></div>
+            <div class="cover-body">
+              <div class="cover-title">{{ book.title }}</div>
+              <div class="cover-rule"></div>
+              <div class="cover-author">{{ book.author }}</div>
+            </div>
+            <div class="cover-year">{{ book.year }}</div>
+          </div>
+          {% endif %}
+
+          <div class="book-info">
+            <h3 class="book-title">{{ book.title }}</h3>
+            <div class="book-author">{{ book.author }} &middot; {{ book.year }}</div>
+            <div class="star-rating" aria-label="{{ book.rating }} out of 5">
+              {% for i in (1..5) %}{% if i <= book.rating %}&#9733;{% else %}&#9734;{% endif %}{% endfor %}
+            </div>
+            <p class="book-note">{{ book.note }}</p>
+          </div>
+
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+
+  <section class="shelf-footer">
+    <h2>Where to Start</h2>
+    <p>
+      If you are new to this and want a sequence rather than a list: read
+      <strong>The Intelligent Investor</strong> for the philosophy, then
+      <strong>Competition Demystified</strong> to understand why some businesses earn
+      better returns than others, then <strong>The Outsiders</strong> to see what good
+      capital allocation looks like in practice. After those three, follow your curiosity.
+    </p>
+    <p>
+      For the tools and data sources I use alongside these, see the
+      <a href="/blog/resources/">Resources</a> page.
+    </p>
+  </section>
+
+</div>
